@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  camera-web:
+    build: .
+    container_name: fake_camera_ip
+    ports:
+      - "8080:80"  # Giả lập camera chạy web trên 8080
+    volumes:
+      - .:/var/www/html
+    restart: always
